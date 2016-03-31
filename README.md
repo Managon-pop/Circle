@@ -1,6 +1,6 @@
 ##Commands
-/cir <radius>  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <- Make circle.<br />
-/trn <radius> <height>    <- Make Tornado.
+/cir radius  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <- Make circle.<br />
+/trn radius height    <- Make Tornado.
 
 ##How to use this plugin?
 1st. Use command /cir or /trn.<br />
