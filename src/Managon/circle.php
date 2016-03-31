@@ -81,7 +81,6 @@ class circle extends PluginBase implements Listener{
     	    break;
     	case "trn":
            foreach($hypo as $h => $height){
-           var_dump($this->tapper);
            $hh = $height*4;
            for($s = 1; $s <= 3600; $s++){
            	   $a = cos(deg2rad($s/2))* $h;//the Base
