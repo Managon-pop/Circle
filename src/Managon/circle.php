@@ -31,7 +31,7 @@ class circle extends PluginBase implements Listener{
 		}else{
 		switch($c->getName()){
 		case "cir":
-           $hypo = $args[0];
+           $hypo = (Int) $args[0];
            if($hypo < 15){
            	$sender->sendMessage("The radius must be bigger than 15");
            	return;
@@ -40,12 +40,12 @@ class circle extends PluginBase implements Listener{
            $sender->sendMessage("Tap the ground! I will make circle.");
            break;
         case "trn":
-           $hypo = $args[0];
+           $hypo = (Int) $args[0];
            if($hypo < 15){
            	$sender->sendMessage("The radius must be bigger than 15");
            	return;
            }
-           $height = $args[1];
+           $height = (Int) $args[1];
            if($height > 30){
            	$sender->sendMessage("The height must be lower than 30");
            	return;
@@ -71,8 +71,8 @@ class circle extends PluginBase implements Listener{
         case "cir":
           $hypo = $type["cir"];
     	    for($r = 0; $r <= 720; $r++){
-    	    	$a = cos(deg2rad($r/2))*(Int) $hypo;
-    	    	$b = sin(deg2rad($r/2))*(Int) $hypo;
+    	    	$a = cos(deg2rad($r/2))* $hypo;
+    	    	$b = sin(deg2rad($r/2))* $hypo;
     	    	$pos = new Vector3($x + $a, $y, $z + $b);
                 $particle = new RedStoneParticle($pos, 20);
                 $level->addParticle($particle, $level->getPlayers());
@@ -84,8 +84,8 @@ class circle extends PluginBase implements Listener{
            var_dump($this->tapper);
            $hh = $height*4;
            for($s = 1; $s <= 3600; $s++){
-           	   $a = cos(deg2rad($s/2))*(Int) $h;//the Base
-               $b = sin(deg2rad($s/2))*(Int) $h;//the highest
+           	   $a = cos(deg2rad($s/2))* $h;//the Base
+               $b = sin(deg2rad($s/2))* $h;//the highest
                $pos = new Vector3($x + $a, $y+($s/$hh), $z + $b);
                $particle = new RedStoneParticle($pos, 20);
                $level->addParticle($particle,  $level->getPlayers());
