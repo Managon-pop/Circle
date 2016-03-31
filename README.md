@@ -8,5 +8,5 @@
 Finish!
 
 ###Image
-・<a href="https://mgn.pe.hu/Image/Circle.png">Circle</a>
-・<a href="https://mgn.pe.hu/Image/Tornado.png">Tornado</a>
+・<a href="https://mgn.pe.hu/Image/circle.html">Circle</a>
+・<a href="https://mgn.pe.hu/Image/tornado.html">Tornado</a>
