@@ -1,0 +1,10 @@
+name: circle
+main: Managon\circle
+version: 1.0.0
+api: 1.7.0
+author: Managon
+commands:
+  cir:
+    discription: Maker
+  trn:
+    discription: Maker
