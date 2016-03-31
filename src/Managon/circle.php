@@ -32,8 +32,8 @@ class circle extends PluginBase implements Listener{
 		switch($c->getName()){
 		case "cir":
            $hypo = (Int) $args[0];
-           if($hypo < 15){
-           	$sender->sendMessage("The radius must be bigger than 15");
+           if($hypo < 10){
+           	$sender->sendMessage("The radius must be bigger than 10");
            	return;
            }
            $this->tapper[$sender->getName()]["cir"] = $hypo;
