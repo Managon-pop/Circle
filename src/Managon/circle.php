@@ -15,13 +15,17 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\scheduler\PluginTask;
 
 class circle extends PluginBase implements Listener{
-    public $tapper;//こんな英語あるのか分からないけど通じるよね
+    public $tapper;
 	public function onEnable(){
 		Server::getInstance()->getPluginManager()->registerEvents($this,$this);
 	}
 
 	public function onCommand(CommandSender $sender, Command $c,$label,array $args){
-		if(count($args) < 1 || count($args) > 5){//feuturekj
+		if(!$sender instanceof Player){
+			$sender->sendMessage("Use the command in a game..");
+			return;
+		}else{
+		if(count($args) < 1 || count($args) > 5){//feuture
 			$sender->sendMessage("§bIf you make circle, Send /cir redius\n§aIf you make tornado, Send /trn redius height");
 			return;
 		}else{
@@ -50,6 +54,7 @@ class circle extends PluginBase implements Listener{
            $sender->sendMessage("Tap the ground! I will make tornado.");
            break;
 		}
+}
 }
 }
 
