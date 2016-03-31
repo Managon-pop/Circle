@@ -41,8 +41,8 @@ class circle extends PluginBase implements Listener{
            break;
         case "trn":
            $hypo = (Int) $args[0];
-           if($hypo < 15){
-           	$sender->sendMessage("The radius must be bigger than 15");
+           if($hypo < 10){
+           	$sender->sendMessage("The radius must be bigger than 10");
            	return;
            }
            $height = (Int) $args[1];
@@ -70,9 +70,9 @@ class circle extends PluginBase implements Listener{
       switch($t){
         case "cir":
           $hypo = $type["cir"];
-    	    for($r = 0; $r <= 720; $r++){
-    	    	$a = cos(deg2rad($r/2))* $hypo;
-    	    	$b = sin(deg2rad($r/2))* $hypo;
+    	    for($r = 0; $r <= 1080; $r++){
+    	    	$a = cos(deg2rad($r/3))* $hypo;
+    	    	$b = sin(deg2rad($r/3))* $hypo;
     	    	$pos = new Vector3($x + $a, $y, $z + $b);
                 $particle = new RedStoneParticle($pos, 20);
                 $level->addParticle($particle, $level->getPlayers());
